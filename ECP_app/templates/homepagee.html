@@ -12,12 +12,12 @@
                                         <form style="opacity: 1;transform: scale(1);background: #ffffff;box-shadow: 0px 0px;padding-bottom: 33px;" method="POST" >
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>EAMCET RANK *</strong><br></label><input class="form-control" type="number" id="username" placeholder="Rank" name="rank" style="background: #ffffff;"></div>
+                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>EAMCET RANK *</strong><br></label><input class="form-control" type="number" id="username" placeholder="Rank" name="rank" style="background: #ffffff;" required></div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>Gender *</strong><br></label><select class="form-select">
+                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>Gender *</strong><br></label><select class="form-select" name="gender" required>
                                                             <optgroup label="Select Gender">
                                                                 <option value="F" selected="">Female</option>
                                                                 <option value="M">Male</option>
@@ -25,7 +25,7 @@
                                                         </select></div>
                                                 </div>
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>Caste *</strong><br></label><select class="form-select">
+                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>Caste *</strong><br></label><select class="form-select" name="caste" required>
                                                         <optgroup label="Select Caste">
 
                                                             <option value="BC_B">BC_B</option>
@@ -42,7 +42,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>Branch</strong><br></label><select class="form-select">
+                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>Branch</strong><br></label><select class="form-select" required>
                                                             <optgroup label="Select Branch">
                                                                 <option value="PHARM - D (M.P.C. STREAM)">PHARM - D (M.P.C. STREAM)</option>
                                                                 <option value="COMPUTER SCIENCE AND ENGINEERING">COMPUTER SCIENCE AND ENGINEERING</option>
