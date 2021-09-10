@@ -34,3 +34,7 @@ def college_branch_data(college,branch):
 	
 	return branches
 
+def fees(college):
+	college = df[df['college']==college]
+	return college.fee.unique().tolist()[0]
+

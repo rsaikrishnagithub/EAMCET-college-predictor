@@ -30,3 +30,8 @@ def college_list(request):
 	context={'colleges':res}
 	return render(request,'colleges_list.html',context)
 
+def college_branch(request,pk):
+	branch=branch_list(pk)
+	fee=fees(pk)
+	context={'branches':branch,'Name':pk,'fee':fee}
+	return render(request,'college.html',context)

@@ -1,7 +1,33 @@
 {% extends 'homepage.html' %}
 {% load static %}
 {% block content %}
+<h1>{{ Name }}</h1>
+<div >
+ <table class="table">
+  <thead>
+    <tr>
+      
+    
+      <th scope="col">Branch</th>
+      <th scope="col">Fee</th>
+      
+
+    </tr>
+  </thead>
+  <tbody>
+  	{% for i in branches %}
+    <tr>
+      
+      
+       <td><a href="#" style="color:#000;text-decoration:none;">{{ i }}</a></td>
+       <td>{{ fee }}</td>
+    
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+</div>
 
 
-
-{% block content %}
+{% endblock content %}
