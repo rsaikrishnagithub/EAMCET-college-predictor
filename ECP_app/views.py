@@ -15,7 +15,7 @@ def homepage(request):
 		caste=str(request.POST.get('caste'))
 		branch=str(request.POST.get('branch'))
 
-		print(rank,gender,caste,branch)
+		# print(rank,gender,caste,branch)
 		val=predict(rank,gender,caste,branch)
 		
 		vals=val.to_numpy().tolist()
