@@ -13,7 +13,7 @@
                                             {% csrf_token %}
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>EAMCET RANK *</strong><br></label><input class="form-control" type="number" id="username" placeholder="Rank" name="rank" style="background: #ffffff;" required></div>
+                                                    <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>EAMCET RANK *</strong><br></label><input class="form-control" type="number" min="0" id="username" placeholder="Rank" name="rank" style="background: #ffffff;" required></div>
                                                 </div>
                                             </div>
                                             <div class="row">
