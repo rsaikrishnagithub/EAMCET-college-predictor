@@ -2,33 +2,48 @@
 {% load static %}
 {% block content %}
 
-<div >
-	<h1>{{ Name }}</h1>
-<br>
-<h2>{{ Branch }}</h2>
- <table class="table">
-  <thead>
-    <tr>
-      
-      <th scope="col">Rank</th>
-      <th scope="col">Gender</th>
-      <th scope="col">Category</th>
 
-    </tr>
-  </thead>
-  <tbody>
-  	{% for i in data %}
-    <tr>
-      
-      <td>{{ i.1 }}</td>
-       <td>{{ i.2 }}</td>
-      <td>{{ i.5 }}</td>
-       
-    </tr>
-    {% endfor %}
-    <tr> <td></td><td></td><td style="font-weight: bold; font-size:40px; "> Total : {{ total }}</td></tr>
-  </tbody>
 
-</table>
+<div class="container-fluid" style="margin-top:30px">
+     <div class="row">
+         <div class="column">
+             <div class="card shadow" style="border-radius: 15px;margin: 50px;">
+                 <div class="card-header py-3" style="background: rgb(18,35,46);margin: 0px;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                    <p class="m-0 fw-bold" style="color: #ffffff;">{{ Name }} <p style="color:yellow; margin-bottom:-10px">{{ Branch }}</p></p>
+                </div>
+
+
+                <div class="card-body" style="background: white;margin: 0px;border-radius: 15px;">
+                    <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+
+                              <th scope="col">Rank</th>
+                              <th scope="col">Gender</th>
+                              <th scope="col">Category</th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for i in data %}
+                            <tr>
+
+                              <td>{{ i.1 }}</td>
+                               <td>{{ i.2 }}</td>
+                              <td>{{ i.5 }}</td>
+
+                            </tr>
+                            {% endfor %}
+                            <tr> <td></td><td></td><td style="font-weight: bold; font-size:25px; "> Total : {{ total }}</td></tr>
+                          </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
 </div>
 {% endblock content %}}

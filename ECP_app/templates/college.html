@@ -1,33 +1,52 @@
 {% extends 'homepage.html' %}
 {% load static %}
 {% block content %}
-<h1>{{ Name }}</h1>
-<div >
- <table class="table">
-  <thead>
-    <tr>
-      
-    
-      <th scope="col">Branch</th>
-      <th scope="col">Fee</th>
-      
 
-    </tr>
-  </thead>
-  <tbody>
-  	{% for i in branches %}
-    <tr>
-      
-      
-       <td><a href="{% url 'cbs' Name i %}" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" style="color:#000;text-decoration:none;">{{ i }}</a></td>
-       <td>{{ fee }}</td>
-    
-    </tr>
-    {% endfor %}
-    
-  </tbody>
-</table>
+<div class="container-fluid" style="margin-top:30px">
+     <div class="row">
+         <div class="column">
+             <div class="card shadow" style="border-radius: 15px;margin: 50px;">
+                 <div class="card-header py-3" style="background: rgb(18,35,46);margin: -1px;border-top-left-radius: 15px;border-top-right-radius: 15px;">
+                    <p class="m-0 fw-bold" style="color: #ffffff;">{{ Name }}</p>
+                </div>
+
+                <div class="card-body" style="background: white;margin: 0px;border-radius: 15px;">
+                    <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+
+
+                              <th scope="col">Branch</th>
+                              <th scope="col">Fee</th>
+
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for i in branches %}
+                            <tr>
+
+
+                               <td><a href="{% url 'cbs' Name i %}" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" style="color:#000;text-decoration:none;">{{ i }}</a></td>
+                               <td>{{ fee }}</td>
+
+                            </tr>
+                            {% endfor %}
+
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
 </div>
+
+
+
+
 
 
 {% endblock content %}

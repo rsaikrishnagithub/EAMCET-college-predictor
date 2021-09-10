@@ -1,24 +1,36 @@
 {% extends 'homepage.html' %}
 {% load static %}
 {% block content %}
-<div >
- <table class="table">
-  <thead>
-    <tr>
-      
-      <th scope="col" style="text-align: center;">College Name</th>
-      
 
-    </tr>
-  </thead>
-  <tbody>
-  	{% for i in colleges %}
-    <tr>
-        <td><a href="{% url 'college_branch' i %}" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" style="color:#000;text-decoration:none;">{{ i }}</a></td> 
-    </tr>
-    {% endfor %}
-    
-  </tbody>
-</table>
+<div class="container-fluid" style="margin-top:30px">
+     <div class="row">
+         <div class="column">
+             <div class="card shadow" style="border-radius: 15px;margin: 50px;">
+                <div class="card-body" style="background: white;margin: 0px;border-radius: 15px;">
+                    <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+
+                              <th scope="col" style="text-align: center;">College Name</th>
+
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for i in colleges %}
+                            <tr>
+                                <td><a href="{% url 'college_branch' i %}" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" style="color:#000;text-decoration:none;">{{ i }}</a></td>
+                            </tr>
+                            {% endfor %}
+
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
 </div>
 {% endblock content %}

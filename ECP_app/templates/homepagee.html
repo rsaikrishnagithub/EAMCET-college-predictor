@@ -1,10 +1,10 @@
 {% extends 'homepage.html' %}
 {% load static %}
 {% block content %}
-<section class="portfolio-block block-intro" style="margin-top: -106px;">
+<section class="portfolio-block block-intro" style="margin-top: 0px;">
             <div class="container-fluid" style="background: var(--bs-white);">
                 <div class="row justify-content-center align-items-center mb-3" style="box-shadow: 0px 0px 0px 0px;">
-                    <div class="col-lg-8" style="margin: 43px;">
+                    <div class="col-lg-8" style="margin: 45px;">
                         <div class="row">
                             <div class="col" style="padding-right: 0px;margin-right: 0px;margin-left: 0px;">
                                 <div class="card border-dark shadow mb-3" style="border-radius: 15px;box-shadow: 0px 0px 0px;">
@@ -22,12 +22,12 @@
                                                                     <option disabled selected value >-- Select Gender -- </option>
                                                                 <option value="F" >Female</option>
                                                                 <option value="M">Male</option>
-                                                           
+
                                                         </select></div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>Caste *</strong><br></label><select class="form-select" name="caste" required>
-                                                        
+
                                                             <option disabled selected value >-- Select Caste -- </option>
                                                             <option value="BC_B">BC_B</option>
                                                             <option value="BC_E">BC_E</option>
@@ -44,7 +44,7 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="mb-3"><label class="form-label" for="username" style="color: rgb(18,35,46);"><strong>Branch</strong><br></label><select class="form-select" name="branch" >
-                                                            
+
                                                                 <option value="None">None</option>
                                                                 <option value="AERONAUTICAL ENGINEERING">AERONAUTICAL ENGINEERING</option>
                                                                 <option value="AGRICULTURAL ENGINEERING">AGRICULTURAL ENGINEERING</option>
@@ -93,7 +93,7 @@
                                                                 <option value="PHARMACEUTICAL ENGINEERING">PHARMACEUTICAL ENGINEERING</option>
 	                                                            <option value="PLANNING">PLANNING</option>
 	                                                            <option value ="TEXTILE TECHNOLOGY">TEXTILE TECHNOLOGY</option>
-                                                            
+
                                                         </select></div>
                                                 </div>
                                             </div>
@@ -107,4 +107,6 @@
                 </div>
             </div>
         </section>
+
+
         {% endblock content %}
