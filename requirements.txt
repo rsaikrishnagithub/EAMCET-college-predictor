@@ -1,0 +1,5 @@
+pandas
+numpy
+gunicorn
+django
+whitenoise==5.2.0
