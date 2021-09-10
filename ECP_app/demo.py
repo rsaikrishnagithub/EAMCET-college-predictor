@@ -18,4 +18,7 @@ def predict(rank,gender,caste,branch):
 	y=temp.sort_values(by='rank', ascending = True)
 	z=y.drop_duplicates(subset = ["college","branch"],keep='last')
 	return z
-	
+
+def colleges_list():
+	res=df.college.unique().tolist()
+	return res

@@ -24,3 +24,8 @@ def homepage(request):
 		return render(request,'results.html',context=context)
 
 	return render(request,'homepagee.html')
+
+def college_list(request):
+	res=college_list()
+	context={'colleges':res}
+	return render(request,'colleges_list.html',context)
