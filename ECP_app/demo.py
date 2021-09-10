@@ -19,6 +19,18 @@ def predict(rank,gender,caste,branch):
 	z=y.drop_duplicates(subset = ["college","branch"],keep='last')
 	return z
 
-def colleges_list():
+def list_of_colleges():
 	res=df.college.unique().tolist()
 	return res
+
+def branch_list(college):
+	college = df[df['college']==college]
+	branches = college.branch.unique().tolist()
+	return branches
+
+def college_branch_data(college,branch):
+	college = df[df['college']==college]
+	branches = college[college['branch']==branch]
+	
+	return branches
+
