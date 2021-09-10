@@ -19,7 +19,7 @@
     <tr>
       
       
-       <td><a href="#" style="color:#000;text-decoration:none;">{{ i }}</a></td>
+       <td><a href="{% url 'cbs' Name i %}" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" style="color:#000;text-decoration:none;">{{ i }}</a></td>
        <td>{{ fee }}</td>
     
     </tr>

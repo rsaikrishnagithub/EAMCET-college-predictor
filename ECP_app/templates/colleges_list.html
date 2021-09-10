@@ -14,7 +14,7 @@
   <tbody>
   	{% for i in colleges %}
     <tr>
-        <td><a href="#" style="color:#000;text-decoration:none">{{ i }}</a></td> 
+        <td><a href="{% url 'college_branch' i %}" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='black'" style="color:#000;text-decoration:none;">{{ i }}</a></td> 
     </tr>
     {% endfor %}
     

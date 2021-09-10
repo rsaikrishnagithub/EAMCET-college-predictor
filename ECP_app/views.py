@@ -35,3 +35,10 @@ def college_branch(request,pk):
 	fee=fees(pk)
 	context={'branches':branch,'Name':pk,'fee':fee}
 	return render(request,'college.html',context)
+
+def college_branch_student(request,pk1,pk2):
+	li=college_branch_data(pk1,pk2)
+	li=li.to_numpy().tolist()
+	total=len(li)
+	context={'data':li,'Name':pk1,'Branch':pk2,'total':total}
+	return render(request,'college_branch_student.html',context)
