@@ -1,0 +1,32 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+ <div >
+ <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Rank</th>
+      <th scope="col">Gender</th>
+      <th scope="col">College Name</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Caste</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  	{% for i in values %}
+    <tr>
+      
+      <td>{{ i.1 }}</td> 
+      <td>{{ i.2 }}</td>
+       <td>{{ i.9 }}</td>
+       <td>{{ i.7 }}</td> 
+        <td>{{ i.3 }}</td> 
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+</div>
+{% endblock content %}

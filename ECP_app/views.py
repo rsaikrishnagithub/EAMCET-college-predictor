@@ -1,11 +1,26 @@
 from django.shortcuts import render
+from .demo import *
+import numpy
+# import pandas as pd
 
+# df=pd.read_csv('tseamcet.csv')
 # Create your views here.
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
 def homepage(request):
 	if request.method == 'POST':
-		rank=request.POST.get('rank')
-		gender=request.POST.get('gender')
-		caste=request.POST.get('caste')
-		branch=request.POST.get('branch')
+		rank=int(request.POST.get('rank'))
+		gender=str(request.POST.get('gender')) 
+		caste=str(request.POST.get('caste'))
+		branch=str(request.POST.get('branch'))
+
+		print(rank,gender,caste,branch)
+		val=predict(rank,gender,caste,branch)
 		
+		vals=val.to_numpy().tolist()
+		# print(vals)
+		context ={'values':vals}
+		return render(request,'results.html',context=context)
+
 	return render(request,'homepagee.html')
